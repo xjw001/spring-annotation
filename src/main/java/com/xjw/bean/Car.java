@@ -6,16 +6,6 @@ import org.springframework.beans.factory.InitializingBean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Car implements InitializingBean, DisposableBean {
-    @Override
-    @PostConstruct
-    @PreDestroy
-    public void destroy() throws Exception {
+public class Car {
 
-    }
-
-    @Override
-    public void afterPropertiesSet() throws Exception {
-
-    }
 }
