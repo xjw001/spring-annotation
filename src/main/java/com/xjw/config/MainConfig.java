@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 
 @PropertySource(value = {"classpath:/person.properties"})
 @Configuration
-@ComponentScan(value="com.xjw.*")
+@ComponentScan(value={"com.xjw.controller","com.xjw.service","com.xjw.dao"})
 public class MainConfig {
 
 
