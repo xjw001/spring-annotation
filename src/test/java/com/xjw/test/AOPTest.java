@@ -10,15 +10,15 @@ public class AOPTest {
     @Test
     public void test(){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigAOP.class);
-        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println(beanDefinitionName);
-        }
-//        MathCalc mathCalc = (MathCalc) applicationContext.getBean("mathCalc");
-//        try {
-//            mathCalc.div(5,1);
-//        } catch (Exception e) {
-//            System.out.println("异常了");
+//        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+//        for (String beanDefinitionName : beanDefinitionNames) {
+//            System.out.println(beanDefinitionName);
 //        }
+        MathCalc mathCalc = (MathCalc) applicationContext.getBean("mathCalc");
+        try {
+            mathCalc.div(5,1);
+        } catch (Exception e) {
+            System.out.println("异常了");
+        }
     }
 }
